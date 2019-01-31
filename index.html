@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Chatbot</title>
+    <style>
+
+    html, body { height: 100%; width: 100%; }
+    body { margin: 0; padding: 0; font-family: Verdana, Geneva, Tahoma, sans-serif }
+    input { width: 100%; }
+
+    #app{
+        width: 300px;
+        position: relative;
+        margin: 0px auto;
+    }
+    #input-text-register { 
+        position: relative; 
+        height: 400px; 
+        width: 100%; 
+        font-size: 12px;
+        overflow-x: hidden; 
+        overflow-y: scroll; 
+        background-color: rgb(235, 235, 235); 
+    }
+    #input-text-register::-webkit-scrollbar{
+        background-color: transparent;
+         width: 2px;
+    }
+    #input-text-register::-webkit-scrollbar-thumb{
+        background-color: green;
+    }
+    label {
+        color:#999; 
+        font-size:12px;
+    }
+    #input-text-id {
+        font-size: 14px;
+        padding: 4px 0;
+        display:block;
+        width:100%;
+        height:25px;
+        background-color: transparent;
+        border:none;
+        border-bottom: 0.5px solid #757575;
+    }
+    #input-text-id:focus {
+        outline:none;
+        border-bottom:2px solid #5264AE;
+    }
+    #input-text-id:focus ~ label {
+        color:#5264AE;
+        cursor: pointer;
+    }
+    .me { color: black }
+    .bot { color: brown; font-weight: bold; }
+    </style>
+</head>
+
+    <body>
+
+    <div id="app" class="main">
+
+        <div id="input-text-register"> </div>
+
+        
+        <input id="input-text-id" type="text" placeholder="Digite sua pergunta...">
+        <label for="input-text-id"></label>
+
+    </div>
+
+        <script src="scripts/robochat.js"></script>
+        <script src="scripts/questions.js"></script>
+        <script src="scripts/index.js"></script>
+
+    </body>
+</html>
